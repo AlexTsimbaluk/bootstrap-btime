@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
+
+<head>
+
+	<!-- META -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    
+    <!-- CONFIG -->
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/main.css">
+
+	<!-- Scripts -->
+	<script src="libs/modernizr/modernizr.js"></script>
+
+    <!-- we can live with IE -->
+    <!--[if lt IE 9]>
+    	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+	<title>Bootstrap btime</title>
+
+</head>
+
+<body>
+
+	<form action="" class="form-horizontal" method="post">
+
+	    <div class="panel panel-primary">
+
+	        <div class="panel-heading">
+	            <h1 class="panel-title"><strong>Выбор даты и времени</strong></h1>
+	        </div>
+
+	        <div class="panel-body">
+	            <div class="col-lg-6">
+
+	                <div class="form-group">
+	                    <label for="input_birthday" class="control-label col-sm-3">
+	                        Выбор времени
+	                    </label>
+	                    <div class="col-sm-9">
+	                        <div class="input-group">
+	                            <span class="input-group-addon">
+	                                <i class="glyphicon glyphicon-time"></i>
+	                            </span>
+	                            <input
+	                                id="btime"
+	                                class="form-control"
+	                                placeholder="Время"
+	                                type="text"
+	                                required="required"
+	                                data-target="bres"
+	                                data-date-selector="bdate"
+	                                data-toggle="btime"
+	                                data-btime-min="15"
+	                                data-btime-max="44640"
+	                                data-btime-step="5"
+	                                data-btime-today="Сегодня"
+	                                data-btime-tomorrow="Завтра"
+	                            />
+	                        </div>
+	                    </div>
+	                </div>
+
+	            </div>
+
+	            <div class="col-lg-6">
+
+	                <div class="form-group">
+	                    <label for="input_birthday" class="control-label col-sm-3">
+	                        Выбор даты
+	                    </label>
+	                    <div class="col-sm-9">
+	                        <div class="input-group">
+	                            <span class="input-group-addon">
+	                                <i class="glyphicon glyphicon-calendar"></i>
+	                            </span>
+	                            <select
+	                                id="bdate"
+	                                class="form-control"
+	                                placeholder="Дата"
+	                                type="text"
+	                                required="required"
+	                                data-toggle="bdate"
+	                                data-btime-min="15"
+	                                data-btime-max="44640"
+	                                data-btime-step="5"
+	                                data-btime-today="Сегодня"
+	                                data-btime-tomorrow="Завтра"
+	                            />
+	                            </select>
+	                        </div>
+	                    </div>
+	                </div>
+
+	            </div>
+
+	            <input id="bres" data-event-type="bres" name="booking_time" value="">
+
+	        </div>
+
+
+	        <div class="panel-footer text-right">
+	            <button class="btn btn-success" type="submit" value="Ok" tabindex="999">
+	                    <i class="glyphicon glyphicon-floppy-save"></i>
+	                Отправить
+	            </button>
+	        </div>  
+
+	    </div>
+	</form>
+	
+	<!-- Preloader  -->
+	<div class="loader">
+		<div class="loader_inner"></div>
+	</div>
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+
+	<script src="libs/jquery/jquery-2.1.4.min.js"></script>
+	<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+	<script src="js/btime-test.js"></script>
+	<script src="js/common.js"></script>
+
+	
+</body>
+</html>

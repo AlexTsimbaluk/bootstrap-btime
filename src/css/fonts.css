@@ -1,0 +1,22 @@
+@font-face {
+	font-family: "RobotoRegular";
+	src: url("../fonts/RobotoRegular/RobotoRegular.eot");
+	src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format("embedded-opentype"),
+			 url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"),
+			 url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+    font-family: 'SFUIDisplay-Light';
+    src: url('../fonts/SFUIDisplay-Light.otf');
+    src: url('../fonts/SFUIDisplay-Light.otf') format('embedded-opentype'),
+	     url('../fonts/SFUIDisplay-Light.otf') format('woff'),
+	     url('../fonts/SFUIDisplay-Light.otf') format('truetype'),
+	     url('../fonts/SFUIDisplay-Light.otf') format('svg');
+    src: local('SFUIDisplay-Light'),
+    	 url('../fonts/SFUIDisplay-Light.otf');
+    font-weight: normal;
+    font-style: normal;
+}
