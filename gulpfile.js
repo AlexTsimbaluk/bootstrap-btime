@@ -53,10 +53,10 @@ gulp.task('build', ['clean', 'less', 'js-min'], function() {
 
 gulp.task('browser-sync', function() {
 	browserSync({
-		/*server: {
+		server: {
 			baseDir: 'src'
-		},*/
-		proxy: 'soundstream',
+		},
+		// proxy: 'soundstream',
 		notify: false
 	});
 });

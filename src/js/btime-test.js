@@ -14,10 +14,17 @@
         }});*/
         // this.$element.mask("29:59");
         this.$element.on('change', function(e) {
-            console.log(this);
-            console.log(_this);
-            _this.checkBtime()
+            _this.checkBtime();
         });
+
+        if(this.config.dateSelector) {
+            var $bdate = $('#' + this.config.dateSelector);
+
+            $bdate.on('change', function(e) {
+                _this.checkBtime();
+            });
+        }
+        
         this.init();
 
         console.log('constructor:end');
