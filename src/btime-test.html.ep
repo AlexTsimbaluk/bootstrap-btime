@@ -1,0 +1,89 @@
+% javascript_for footer => url_for_js_css '/js/lib/bootstrap.btime/btime-test.js';
+
+<form action="" class="form-horizontal" method="post">
+
+    <div class="panel panel-primary">
+
+        <div class="panel-heading">
+            <h1 class="panel-title"><strong>Выбор даты и времени</strong></h1>
+        </div>
+
+        <div class="panel-body">
+            <div class="col-lg-6">
+
+                <div class="form-group">
+                    <label for="input_birthday" class="control-label col-sm-3">
+                        Выбор времени
+                    </label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-clock"></i>
+                            </span>
+                            <input
+                                id="btime"
+                                class="form-control"
+                                placeholder="<%= __('Время') %>"
+                                type="text"
+                                required="required"
+                                data-target="bres"
+                                data-date-selector="bdate"
+                                data-toggle="btime"
+                                data-btime-min="15"
+                                data-btime-max="44640"
+                                data-btime-step="5"
+                                data-btime-today="<%= __('Сегодня') %>"
+                                data-btime-tomorrow="<%= __('Завтра') %>"
+                            />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="form-group">
+                    <label for="input_birthday" class="control-label col-sm-3">
+                        Выбор даты
+                    </label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <span class="input-group-addon">
+                                <i class="glyphicon glyphicon-calendar"></i>
+                            </span>
+                            <select
+                                id="bdate"
+                                class="form-control"
+                                placeholder="<%= __('Дата') %>"
+                                type="text"
+                                required="required"
+                                data-toggle="bdate"
+                                data-btime-min="15"
+                                data-btime-max="44640"
+                                data-btime-step="5"
+                                data-btime-today="<%= __('Сегодня') %>"
+                                data-btime-tomorrow="<%= __('Завтра') %>"
+                            />
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <input id="bres" data-event-type="bres" name="booking_time" value="">
+
+        </div>
+
+
+        <div class="panel-footer text-right">
+            <button class="btn btn-success" type="submit" value="Ok" tabindex="999">
+                    <i class="glyphicon glyphicon-floppy-save"></i>
+                Отправить
+            </button>
+        </div>  
+
+    </div>
+</form>
+

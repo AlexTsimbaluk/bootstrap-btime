@@ -1,5 +1,18 @@
-;(function($) {
-  
+/* ========================================================================
+ * Bootstrap: alert.js v3.2.0
+ * http://getbootstrap.com/javascript/#alerts
+ * ========================================================================
+ * Copyright 2011-2014 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ * ======================================================================== */
+
+
++function ($) {
+    'use strict';
+
+    // BTIME CLASS DEFINITION
+    // ======================
+
     var defaults = {};
 
     function Btime (element, options) {
@@ -13,6 +26,7 @@
             return _this.checkBtime();
         }});*/
         // this.$element.mask("29:59");
+
         this.$element.on('change', function(e) {
             _this.checkBtime();
         });
@@ -30,6 +44,10 @@
 
         console.log('constructor:end');
     }
+    
+
+    Btime.VERSION = '1.0.0';
+
 
     // Инициализация плагина, создание массива с возможными датами для селекта
     Btime.prototype.init = function() {
@@ -138,7 +156,6 @@
         _this.checkBtime();
 
         console.log('init:end');
-
     }
 
     Btime.prototype.rfc_date = function(dt) {
@@ -287,6 +304,24 @@
 
         console.log('checkBtimeAuto:end');
     };
+    
+
+    // BTIME PLUGIN DEFINITION
+    // =======================
+
+    // PLUGIN DEFINITION
+    /*function Plugin() {
+        return this.each(function () {
+            var $this   = $(this),
+                data    = $this.data('btime');
+
+            if (!data) $this.data('btime', (data = new Btime(this)));
+        });
+    };
+
+
+    $.fn.btime             = Plugin;
+    $.fn.btime.Constructor = Btime;*/
 
     $.fn.btime = function() {
 
@@ -312,12 +347,16 @@
         /*new Btime(this, options);
         return this;*/
     };
-  
-})(jQuery);
 
+    
 
-$(document).ready(function() {
+    // BTIME DATA-API
+    // ==============
+    $(document).on('ready', function () {
+        $('[data-toggle="btime"]').each(function () {
+            var $this  = $(this);
+            $this.btime();
+        });
+    });
 
-    $('[data-toggle="btime"]').btime();
-
-});
+}(jQuery);
